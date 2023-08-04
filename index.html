@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+      }
+
+      header {
+        background-image: linear-gradient(
+            rgba(20, 40, 80, 0.9),
+            rgba(20, 40, 80, 0.7)
+          ),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/137/original/city-of-gold-coast-yZDcQgD00fI-unsplash.jpg?1691155365");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: white;
+        padding: 200px 0;
+        text-shadow: #272044;
+      }
+
+      header h1 {
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 30px 0;
+      }
+
+      header h2 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      header h3 {
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      header a {
+        background-color: white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 3px;
+        padding: 16px 36px;
+        border-radius: 6px;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 30px;
+        color: rgb(20, 40, 80);
+      }
+
+      main {
+      }
+
+      main h2 {
+        color: rgb(20, 40, 80);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 5px;
+        text-align: left;
+        text-transform: uppercase;
+        opacity: 30%;
+        margin: 0;
+      }
+
+      main h3 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.5;
+        text-align: left;
+        color: rgb(20, 40, 80);
+        margin: 0;
+      }
+      main h4 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        text-align: left;
+        color: rgb(20, 40, 80);
+        margin: 0;
+      }
+
+      main h5 {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1;
+        text-align: left;
+        color: rgb(20, 40, 80);
+        margin: 0;
+      }
+
+      main p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        color: rgb(20, 40, 80);
+        opacity: 70%;
+      }
+
+      footer {
+        background-image: linear-gradient(
+            rgba(20, 40, 80, 0.8),
+            rgba(20, 40, 80, 0.8)
+          ),
+          url(../img/sacha-verheij-X0rRYtJy0R8-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 15px 0;
+        margin-top: 30px;
+      }
+
+      footer h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      footer p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        opacity: 0.7;
+      }
+
+      footer li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      footer ul {
+        padding: 0;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: white;
+        opacity: 0.7;
+      }
+      section {
+        margin: 0 auto;
+        padding: 40px 70px;
+      }
+
+      section.secondary {
+        background: rgba(248, 248, 248, 1);
+      }
+      footer .closing-line {
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        padding: 0 10px;
+      }
+
+      footer section {
+        padding: 5px 70px;
+      }
+
+      .background-button {
+        display: block;
+        margin: 20px auto;
+        padding: 16px 36px;
+        background: rgb(0, 168, 204);
+        border-radius: 6px;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        border: none;
+      }
+
+      .background-button:hover {
+        background: rgb(20, 40, 80);
+        color: white;
+      }
+
+      .container {
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .grid {
+        display: grid;
+      }
+
+      .grid-2-col {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .grid-3-col-first-narrow {
+        grid-template-columns: 1.5fr 2fr 2fr;
+        grid-gap: 20px;
+      }
+
+      .grid-3-col {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+      }
+
+      .card {
+        background-color: white;
+        margin-top: 30px;
+      }
+
+      .embed {
+        width: 100%;
+        aspect-ratio: 1/1;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .card p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        color: rgb(20, 40, 80);
+        opacity: 70%;
+      }
+
+      .card-header.grid {
+        grid-gap: 0;
+      }
+
+      .card-footer {
+        padding: 20px 0 10px;
+      }
+      .button {
+        background: rgb(0, 168, 204);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 3px;
+        padding: 16px 36px;
+        border-radius: 6px;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        color: white;
+      }
+
+      .img-responsive {
+        width: 100%;
+      }
+
+      .secondary h2,
+      .secondary h3,
+      .instagram-embed h2,
+      .instagram-embed h3,
+      .video-section h2,
+      .video-section h3,
+      .music-section h2,
+      .music-section h3 {
+        text-align: center;
+      }
+
+      .video-section {
+        background: rgba(248, 248, 248, 1);
+      }
+      section.instagram-embed {
+        background: white;
+        margin: 0;
+      }
+      .instagram-embed h3,
+      .video-section h3,
+      .music-section h3 {
+        margin-bottom: 30px;
+      }
+      .youtube-embed {
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin: 0 auto;
+        display: block;
+      }
+
+      @media (max-width: 960px) {
+        .container {
+          max-width: 700px;
+        }
+        header {
+          padding: 40px 0;
+        }
+        header h1 {
+          font-size: 35px;
+        }
+
+        header h2 {
+          font-size: 13px;
+        }
+
+        header h3 {
+          font-size: 12px;
+        }
+
+        header a {
+          font-size: 12px;
+          padding: 8px 18px;
+        }
+
+        main h2,
+        main h3 {
+          text-align: center;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+          grid-gap: 15px;
+        }
+        section {
+          padding: 10px;
+        }
+
+        .card-header img {
+          display: none;
+        }
+
+        footer .closing-line {
+          padding: 0 70px;
+          text-align: left;
+        }
+
+        embed {
+          aspect-ratio: 16/9;
+        }
+      }
+    </style>
+    <title>🌊 Blue Mind Therapy</title>
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="changeBackgroundColor()" class="background-button">
+        Change Background Color
+      </button>
+      <header>
+        <h3>.Surfing.</h3>
+        <h1>Welcome to Blue Mind Therapy</h1>
+        <h2>
+          <em>The best surfer out there is the one having the most fun.</em>
+          <br />
+          Phil Edwards
+        </h2>
+        <a href="#more">Learn more</a>
+      </header>
+      <main>
+        <section class="grid grid-2-col">
+          <div>
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/140/original/knut-robinson-DTHtjyRuozs-unsplash-2.jpg?1691155383"
+              alt="Woman surfing on green wave"
+              class="img-responsive"
+            />
+          </div>
+          <div>
+            <a name="more"></a>
+            <h2>Why surfing?</h2>
+            <h3>Surfing's impact on mental health</h3>
+            <p>
+              Surfing's impact on mental health extends beyond physical
+              benefits, as it creates a unique sense of freedom and exhilaration
+              that can alleviate symptoms of anxiety and depression. The
+              rhythmic motion of riding waves can induce a meditative state,
+              promoting relaxation and reducing stress. Spending time in the
+              ocean, surrounded by the vastness of nature, can foster a sense of
+              awe and connection, instilling a profound sense of peace and
+              perspective. <br /><br />
+              Additionally, the challenge of mastering surfing skills and
+              navigating ever-changing conditions can boost self-esteem and
+              resilience, empowering individuals to overcome obstacles both on
+              and off the board. The surfing community, known for its
+              camaraderie and inclusiveness, offers a strong support system,
+              reducing feelings of isolation and loneliness.
+            </p>
+          </div>
+        </section>
+        <section class="secondary">
+          <h2>Surf spots</h2>
+          <h3>My favorite spots for surfing</h3>
+          <div class="grid grid-3-col">
+            <div class="card">
+              <div class="card-header grid grid-2-col">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/141/original/paul-treubrodt-cmyLF0EDNVE-unsplash-fuerteventura.jpg?1691155389"
+                  alt=""
+                  class="img-responsive"
+                />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14000.341361475275!2d-13.84149856754949!3d28.68709365993894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc47cb5b580d33b3%3A0x49c6c80b4b532b14!2sMoro%20Beach!5e0!3m2!1shu!2sch!4v1691072670326!5m2!1shu!2sch"
+                  class="embed"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+
+              <div class="card-body">
+                <h4>Moro Beach 🇪🇸</h4>
+                <p>
+                  Tucked away on the captivating island of Fuerteventura in
+                  Spain, Moro Beach is a true surfers' haven. Offering
+                  consistent and powerful waves, this hidden gem attracts
+                  surfers of all levels seeking an unforgettable experience amid
+                  the island's natural beauty and tranquil ambiance.
+                </p>
+                <h5>Coordinates:</h5>
+                <p>l28.694954539455374, -13.829806428450368</p>
+                <h5>What I like about this spot</h5>
+                <p>
+                  This was the first place where I actually attended a proper
+                  surf course, so it will always been near and dear to my heart.
+                  It is a safe place for first timers with pure sand beach, and
+                  no rocks at all. Sometimes it gets too windy, but there are
+                  other options nearby in that case.
+                </p>
+                <div class="card-footer">
+                  <a
+                    href="https://goo.gl/maps/YyNh9Qev1WRGS2Ai9"
+                    class="button"
+                    target="_blank"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header grid grid-2-col">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/139/original/elio-santos-5LAjMlkyjag-unsplash-caparica.jpg?1691155376"
+                  alt=""
+                  class="img-responsive"
+                />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99779.48780030348!2d-9.370892810335938!3d38.60036149307828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1eca8ae467a733%3A0xe095a79fc24de51d!2sCosta%20da%20Caparica%2C%20Portug%C3%A1lia!5e0!3m2!1shu!2sch!4v1691073154903!5m2!1shu!2sch"
+                  class="embed"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="card-body">
+                <h4>Costa da Caparica 🇵🇹</h4>
+                <p>
+                  With its long sandy beaches and consistent Atlantic swells,
+                  Costa da Caparica is a famous surf destination catering to
+                  surfers of all levels, providing a vibrant surf culture and
+                  beachside cafes to unwind after riding the waves. It takes
+                  only 30 minutes to reach from Lisbon.
+                </p>
+                <h5>Coordinates:</h5>
+                <p>38.656434862586366, -9.248043957145342</p>
+                <h5>What I like about this spot</h5>
+                <p>
+                  Super long waves on this coast and perfect location very
+                  easily reachable from Lisbon. It has lots of restaurants, bars
+                  and a really cool bicycle lane right at the shore. My favorite
+                  playa was Praia de São João, you can find the coordinates
+                  above.
+                </p>
+                <div class="card-footer">
+                  <a
+                    href="https://goo.gl/maps/kyb5oR7Kcg7aFQat7"
+                    class="button"
+                    target="_blank"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header grid grid-2-col">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/138/original/eirik-skarstein-zp-iaaj6jn4-unsplash-unawatuna.jpg?1691155372"
+                  alt=""
+                  class="img-responsive"
+                />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31743.015236137355!2d80.23375478408595!3d6.011635264303525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae172f162bf926d%3A0xc0444c5e8377446c!2sUnawatuna%2C%20Sr%C3%AD%20Lanka!5e0!3m2!1shu!2sch!4v1691073103462!5m2!1shu!2sch"
+                  class="embed"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="card-body">
+                <h4>Unawatuna 🇱🇰</h4>
+                <p>
+                  Nestled along Sri Lanka's southern coast, Unawatuna's tropical
+                  paradise features warm waters, playful waves, and palm-fringed
+                  shores, enticing both beginners and experienced surfers for an
+                  enchanting surfing experience. It has a vibrant local surf
+                  community with a friendly and inviting athmosphere.
+                </p>
+                <h5>Coordinates:</h5>
+                <p>6.007656475761492, 80.24374285300682</p>
+                <h5>What I like about this spot</h5>
+                <p>
+                  Surfing here was an absolute dream! The beach is pure sand and
+                  the water was not only clean, but the temperature of it was as
+                  well consistenly around 25 Celsius degrees. You could also
+                  find plenty of places to eat or drink right at the beach. I
+                  would highly recommend getting a fresh coconut after surfing.
+                </p>
+                <div class="card-footer">
+                  <a
+                    href="https://goo.gl/maps/QEJjzPoyR5aB3drm7"
+                    class="button"
+                    target="_blank"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="instagram-embed">
+          <h2>Gallery</h2>
+          <h3>My favorite surf photos</h3>
+          <div class="grid grid-3-col">
+            <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/CvdrLM9pEOL/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
+              style="
+                background: #fff;
+                border: 0;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                margin: 1px;
+                max-width: 540px;
+                min-width: 326px;
+                padding: 0;
+                width: 99.375%;
+                width: -webkit-calc(100% - 2px);
+                width: calc(100% - 2px);
+              "
+            >
+              <div style="padding: 16px">
+                <a
+                  href="https://www.instagram.com/p/CvdrLM9pEOL/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    background: #ffffff;
+                    line-height: 0;
+                    padding: 0 0;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 100%;
+                  "
+                  target="_blank"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        flex-grow: 0;
+                        height: 40px;
+                        margin-right: 14px;
+                        width: 40px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 100px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 60px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="padding: 19% 0"></div>
+                  <div
+                    style="
+                      display: block;
+                      height: 50px;
+                      margin: 0 auto 12px;
+                      width: 50px;
+                    "
+                  >
+                    <svg
+                      width="50px"
+                      height="50px"
+                      viewBox="0 0 60 60"
+                      version="1.1"
+                      xmlns="https://www.w3.org/2000/svg"
+                      xmlns:xlink="https://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          transform="translate(-511.000000, -20.000000)"
+                          fill="#000000"
+                        >
+                          <g>
+                            <path
+                              d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div style="padding-top: 8px">
+                    <div
+                      style="
+                        color: #3897f0;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 550;
+                        line-height: 18px;
+                      "
+                    >
+                      View this post on Instagram
+                    </div>
+                  </div>
+                  <div style="padding: 12.5% 0"></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      margin-bottom: 14px;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(0px) translateY(7px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          height: 12.5px;
+                          transform: rotate(-45deg) translateX(3px)
+                            translateY(1px);
+                          width: 12.5px;
+                          flex-grow: 0;
+                          margin-right: 14px;
+                          margin-left: 2px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(9px) translateY(-18px);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: 8px">
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 20px;
+                          width: 20px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 2px solid transparent;
+                          border-left: 6px solid #f4f4f4;
+                          border-bottom: 2px solid transparent;
+                          transform: translateX(16px) translateY(-4px)
+                            rotate(30deg);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: auto">
+                      <div
+                        style="
+                          width: 0px;
+                          border-top: 8px solid #f4f4f4;
+                          border-right: 8px solid transparent;
+                          transform: translateY(16px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          flex-grow: 0;
+                          height: 12px;
+                          width: 16px;
+                          transform: translateY(-4px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 8px solid #f4f4f4;
+                          border-left: 8px solid transparent;
+                          transform: translateY(-4px) translateX(8px);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                      margin-bottom: 24px;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 224px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 144px;
+                      "
+                    ></div></div
+                ></a>
+                <p
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 0;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    padding: 8px 0 7px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  "
+                >
+                  <a
+                    href="https://www.instagram.com/p/CvdrLM9pEOL/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: normal;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                    target="_blank"
+                    >A post shared by Summer (@my_surf_ig)</a
+                  >
+                </p>
+              </div>
+            </blockquote>
+            <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/CcDkssXpAHf/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
+              style="
+                background: #fff;
+                border: 0;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                margin: 1px;
+                max-width: 540px;
+                min-width: 326px;
+                padding: 0;
+                width: 99.375%;
+                width: -webkit-calc(100% - 2px);
+                width: calc(100% - 2px);
+              "
+            >
+              <div style="padding: 16px">
+                <a
+                  href="https://www.instagram.com/p/CcDkssXpAHf/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    background: #ffffff;
+                    line-height: 0;
+                    padding: 0 0;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 100%;
+                  "
+                  target="_blank"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        flex-grow: 0;
+                        height: 40px;
+                        margin-right: 14px;
+                        width: 40px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 100px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 60px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="padding: 19% 0"></div>
+                  <div
+                    style="
+                      display: block;
+                      height: 50px;
+                      margin: 0 auto 12px;
+                      width: 50px;
+                    "
+                  >
+                    <svg
+                      width="50px"
+                      height="50px"
+                      viewBox="0 0 60 60"
+                      version="1.1"
+                      xmlns="https://www.w3.org/2000/svg"
+                      xmlns:xlink="https://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          transform="translate(-511.000000, -20.000000)"
+                          fill="#000000"
+                        >
+                          <g>
+                            <path
+                              d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div style="padding-top: 8px">
+                    <div
+                      style="
+                        color: #3897f0;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 550;
+                        line-height: 18px;
+                      "
+                    >
+                      View this post on Instagram
+                    </div>
+                  </div>
+                  <div style="padding: 12.5% 0"></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      margin-bottom: 14px;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(0px) translateY(7px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          height: 12.5px;
+                          transform: rotate(-45deg) translateX(3px)
+                            translateY(1px);
+                          width: 12.5px;
+                          flex-grow: 0;
+                          margin-right: 14px;
+                          margin-left: 2px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(9px) translateY(-18px);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: 8px">
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 20px;
+                          width: 20px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 2px solid transparent;
+                          border-left: 6px solid #f4f4f4;
+                          border-bottom: 2px solid transparent;
+                          transform: translateX(16px) translateY(-4px)
+                            rotate(30deg);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: auto">
+                      <div
+                        style="
+                          width: 0px;
+                          border-top: 8px solid #f4f4f4;
+                          border-right: 8px solid transparent;
+                          transform: translateY(16px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          flex-grow: 0;
+                          height: 12px;
+                          width: 16px;
+                          transform: translateY(-4px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 8px solid #f4f4f4;
+                          border-left: 8px solid transparent;
+                          transform: translateY(-4px) translateX(8px);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                      margin-bottom: 24px;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 224px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 144px;
+                      "
+                    ></div></div
+                ></a>
+                <p
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 0;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    padding: 8px 0 7px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  "
+                >
+                  <a
+                    href="https://www.instagram.com/p/CcDkssXpAHf/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: normal;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                    target="_blank"
+                    >A post shared by ERYN 🌊 KROUSE (@erynkrouse)</a
+                  >
+                </p>
+              </div>
+            </blockquote>
+            <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/Cq3QigLp-yu/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-version="14"
+              style="
+                background: #fff;
+                border: 0;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                  0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                margin: 1px;
+                max-width: 540px;
+                min-width: 326px;
+                padding: 0;
+                width: 99.375%;
+                width: -webkit-calc(100% - 2px);
+                width: calc(100% - 2px);
+              "
+            >
+              <div style="padding: 16px">
+                <a
+                  href="https://www.instagram.com/p/Cq3QigLp-yu/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style="
+                    background: #ffffff;
+                    line-height: 0;
+                    padding: 0 0;
+                    text-align: center;
+                    text-decoration: none;
+                    width: 100%;
+                  "
+                  target="_blank"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 50%;
+                        flex-grow: 0;
+                        height: 40px;
+                        margin-right: 14px;
+                        width: 40px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 100px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 60px;
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div style="padding: 19% 0"></div>
+                  <div
+                    style="
+                      display: block;
+                      height: 50px;
+                      margin: 0 auto 12px;
+                      width: 50px;
+                    "
+                  >
+                    <svg
+                      width="50px"
+                      height="50px"
+                      viewBox="0 0 60 60"
+                      version="1.1"
+                      xmlns="https://www.w3.org/2000/svg"
+                      xmlns:xlink="https://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          transform="translate(-511.000000, -20.000000)"
+                          fill="#000000"
+                        >
+                          <g>
+                            <path
+                              d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div style="padding-top: 8px">
+                    <div
+                      style="
+                        color: #3897f0;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 550;
+                        line-height: 18px;
+                      "
+                    >
+                      View this post on Instagram
+                    </div>
+                  </div>
+                  <div style="padding: 12.5% 0"></div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      margin-bottom: 14px;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(0px) translateY(7px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          height: 12.5px;
+                          transform: rotate(-45deg) translateX(3px)
+                            translateY(1px);
+                          width: 12.5px;
+                          flex-grow: 0;
+                          margin-right: 14px;
+                          margin-left: 2px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          height: 12.5px;
+                          width: 12.5px;
+                          transform: translateX(9px) translateY(-18px);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: 8px">
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 20px;
+                          width: 20px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 2px solid transparent;
+                          border-left: 6px solid #f4f4f4;
+                          border-bottom: 2px solid transparent;
+                          transform: translateX(16px) translateY(-4px)
+                            rotate(30deg);
+                        "
+                      ></div>
+                    </div>
+                    <div style="margin-left: auto">
+                      <div
+                        style="
+                          width: 0px;
+                          border-top: 8px solid #f4f4f4;
+                          border-right: 8px solid transparent;
+                          transform: translateY(16px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          flex-grow: 0;
+                          height: 12px;
+                          width: 16px;
+                          transform: translateY(-4px);
+                        "
+                      ></div>
+                      <div
+                        style="
+                          width: 0;
+                          height: 0;
+                          border-top: 8px solid #f4f4f4;
+                          border-left: 8px solid transparent;
+                          transform: translateY(-4px) translateX(8px);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      flex-grow: 1;
+                      justify-content: center;
+                      margin-bottom: 24px;
+                    "
+                  >
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        margin-bottom: 6px;
+                        width: 224px;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        background-color: #f4f4f4;
+                        border-radius: 4px;
+                        flex-grow: 0;
+                        height: 14px;
+                        width: 144px;
+                      "
+                    ></div></div
+                ></a>
+                <p
+                  style="
+                    color: #c9c8cd;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 0;
+                    margin-top: 8px;
+                    overflow: hidden;
+                    padding: 8px 0 7px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                  "
+                >
+                  <a
+                    href="https://www.instagram.com/p/Cq3QigLp-yu/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: normal;
+                      line-height: 17px;
+                      text-decoration: none;
+                    "
+                    target="_blank"
+                    >A post shared by JANINE (@joliejanine)</a
+                  >
+                </p>
+              </div>
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+          </div>
+        </section>
+        <section class="video-section">
+          <h2>Videos</h2>
+          <h3>Surf videos I love the most</h3>
+          <div class="grid grid-2-col">
+            <div>
+              <iframe
+                src="https://www.youtube.com/embed/1ctW5-39xWk?controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="youtube-embed"
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                src="https://www.youtube.com/embed/TT3s95pQK7w?controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="youtube-embed"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+        <section class="music-section">
+          <h2>Music</h2>
+          <h3>Songs that give me the surf vibes</h3>
+          <iframe
+            style="border-radius: 6px"
+            src="https://open.spotify.com/embed/playlist/0Yud83nAJhnPpuABp66vr3?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </section>
+      </main>
+      <footer>
+        <section class="grid grid-3-col-first-narrow">
+          <div>
+            <h3>More about surfing</h3>
+            <ul>
+              <li>
+                <a href="https://www.surfline.com/" target="_blank">Surfline</a>
+              </li>
+              <li>
+                <a href="https://www.worldsurfleague.com/" target="_blank"
+                  >World Surf League</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/c/OmbeSurf/videos"
+                  target="_blank"
+                  >OMBE Surf Videos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>About Me</h3>
+            <p>
+              Hello there! <br />
+              My name is Henriett and it's been just a year since I hopped on a
+              surfboard for the first time. The moment I caught that first wave,
+              I was head over heels for this sport! Feeling the ocean's strength
+              beneath me and connecting with nature in such an exhilarating
+              way—it's pure magic!
+            </p>
+          </div>
+          <div>
+            <h3>About this website</h3>
+            <p>
+              I created this page as part of a project for SheCodes Responsive
+              to develop my coding skills.
+            </p>
+          </div>
+        </section>
+        <p class="closing-line">
+          This project was coded by
+          <a href="mailto:horvath.henriett@gmail.com" target="_blank"
+            >Henriett Horvath </a
+          >and is open-sourced on
+          <a href="https://github.com/henih/travel-project" target="_blank">
+            GitHub.
+            <br />
+            Disclaimer: The content of this website was partially generated by
+            ChatGPT v3.5 and may contain inaccurate information.</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script>
+    function changeBackgroundColor() {
+      let body = document.body;
+      let randomColor = `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
+
+      body.style.backgroundColor = randomColor;
+    }
+    function getRandomNumber() {
+      return Math.floor(Math.random() * 256);
+    }
+  </script>
+</html>
